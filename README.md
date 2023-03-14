@@ -1,4 +1,5 @@
 # Bearing-and-KEY
+The code below is for a bearing
 % Input values
 F = input('Enter applied load (N): ');
 L = input('Enter bearing span (mm): ');
@@ -27,3 +28,17 @@ d = ((60 * n * L * kf * kfkr * k * Sf) / (C * pi))^0.5; % Minimum required beari
 fprintf('Minimum required bearing dimensions:\n')
 fprintf('Diameter of bearing = %.2f mm\n', d)
 
+The code below ia for a key
+% Input values
+T = input('Enter torque (N-m): ');
+P = input('Enter power (W): ');
+N = input('Enter rotational speed (rpm): ');
+Sf = input('Enter safety factor: ');
+b = input('Enter width of key (mm): ');
+% Calculation of key dimensions
+d = (2*T/(Sf*b))^0.3333; % Diameter of key
+h = 2*d; % Height of key
+% Display results
+fprintf('Minimum required key dimensions:\n')
+fprintf('Diameter of key = %.2f mm\n', d)
+fprintf('Height of key = %.2f mm\n', h)
